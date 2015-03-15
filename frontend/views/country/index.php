@@ -3,10 +3,14 @@
 use yii\helpers\Html;
 ?>
 <h1>country/index</h1>
-<ul>
+<table class="table">
+<tbody>
+<tr>
 <?php foreach ($countries as $country): ?> 
-	<li>
+	<td>
 		<?= Html::encode("{$country->name} ({$country->code})") ?> - <?= $country->population ?>
-	</li>
+	</td>
 	<?php endforeach; ?>
-	</ul>
+	</tr>
+</tbody>
+	</table>
